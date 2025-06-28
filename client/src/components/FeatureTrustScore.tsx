@@ -1,5 +1,7 @@
+"use client";
 
 import { Trophy, Star, Shield, Heart } from "lucide-react";
+import { ReviewLoveAnimation } from "./animations/ReviewLoveAnimation";
 
 const FeatureTrustScore = () => {
   return (
@@ -63,9 +65,7 @@ const FeatureTrustScore = () => {
               <div className="text-center">
                 <div className="h-48 flex items-center justify-center">
                   <div className="relative">
-                    <div className="w-24 h-24 border-4 border-slate-600 rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">85</span>
-                    </div>
+                    <ReviewLoveAnimation />
                     <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-400/20 rounded-full flex items-center justify-center">
                       <Star className="h-3 w-3 text-yellow-400" />
                     </div>

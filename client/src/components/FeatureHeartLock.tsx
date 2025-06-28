@@ -1,5 +1,7 @@
+"use client";
 
 import { Heart, Star, Trophy, TrendingUp } from "lucide-react";
+import { PartnersAnimation } from "./animations/PartnersAnimation";
 
 const FeatureHeartLock = () => {
   return (
@@ -40,12 +42,7 @@ const FeatureHeartLock = () => {
             <div className="text-center">
               <div className="h-64 flex items-center justify-center">
                 <div className="relative">
-                  <div className="w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center">
-                    <Heart className="h-16 w-16 text-pink-400" />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                    <Star className="h-4 w-4 text-yellow-400" />
-                  </div>
+                  <PartnersAnimation />
                 </div>
               </div>
               <p className="text-slate-400 text-sm">HeartLock NFT Preview</p>

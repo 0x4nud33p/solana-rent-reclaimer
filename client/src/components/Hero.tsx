@@ -1,6 +1,9 @@
+"use client";
 
 import { Button } from "@/components/ui/button";
-import { Heart, Sparkles, Play } from "lucide-react";
+import { Heart, Sparkles, Play, Plus } from "lucide-react";
+import { LoveAnimation } from "./animations/LoveAnimation";
+import { LoveHomeAnimation } from "./animations/LoveHome";
 
 const Hero = () => {
   return (
@@ -38,27 +41,15 @@ const Hero = () => {
             <Sparkles className="mr-2 h-5 w-5" />
             Get Started
           </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white px-8 py-3 font-semibold rounded-xl transition-all duration-300"
-          >
-            <Play className="mr-2 h-4 w-4" />
-            Watch Demo
-          </Button>
         </div>
 
         {/* Clean animation placeholder */}
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-          <div className="h-32 flex items-center justify-center">
-            <div className="flex space-x-6">
-              <Heart className="h-12 w-12 text-pink-400 animate-pulse" />
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SOL</span>
-              </div>
-            </div>
+        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-10 border border-slate-700">
+          <div className="flex items-center justify-center">
+              <LoveHomeAnimation />
+              <Plus className="h-30 w-30 text-pink-400 animate-pulse" />
+              <LoveAnimation />
           </div>
-          <p className="text-slate-400 text-sm mt-4">Interactive demo coming soon</p>
         </div>
       </div>
     </section>
