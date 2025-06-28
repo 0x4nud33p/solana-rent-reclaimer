@@ -3,13 +3,11 @@ import { Trophy, Star, Shield, Heart } from "lucide-react";
 
 const FeatureTrustScore = () => {
   return (
-    <section className="py-24 px-6 bg-slate-800/30">
+    <section id="trust" className="py-24 px-6 bg-slate-800/30 font-spaceGrotesk">
       <div className="max-w-6xl mx-auto">
         {/* Clean section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Trust Score System
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Trust Score System</h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Build your reputation through genuine connections and unlock exclusive features
           </p>
@@ -19,7 +17,7 @@ const FeatureTrustScore = () => {
           {/* Left column - Clean Trust Score UI */}
           <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
             <h3 className="text-xl font-semibold text-white mb-6">Your Trust Score</h3>
-            
+
             {/* Clean progress bar */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-3">
@@ -27,7 +25,10 @@ const FeatureTrustScore = () => {
                 <span className="text-purple-400 font-semibold">85/100</span>
               </div>
               <div className="w-full bg-slate-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full transition-all duration-500" style={{width: '85%'}}></div>
+                <div
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full transition-all duration-500"
+                  style={{ width: '85%' }}
+                ></div>
               </div>
             </div>
 
@@ -77,15 +78,15 @@ const FeatureTrustScore = () => {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-white">Level Up Your Dating</h3>
               <p className="text-slate-300">
-                Complete dates, receive positive feedback, and stake consistently to increase your Trust Score. 
-                Higher scores unlock premium features and exclusive matches.
+                Complete dates, receive positive feedback, and stake consistently to increase your Trust Score. Higher
+                scores unlock premium features and exclusive matches.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default FeatureTrustScore;

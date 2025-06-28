@@ -3,17 +3,15 @@ import { Heart, Star, Trophy, TrendingUp } from "lucide-react";
 
 const FeatureHeartLock = () => {
   return (
-    <section className="py-24 px-6">
+    <section id="nfts" className="py-24 px-6 font-spaceGrotesk">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left column - Clean text content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              HeartLock NFTs
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">HeartLock NFTs</h2>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              When two hearts connect and successfully complete their first date, they can mint a unique HeartLock NFT together. 
-              This commemorative token represents the beginning of their journey.
+              When two hearts connect and successfully complete their first date, they can mint a unique HeartLock NFT
+              together. This commemorative token represents the beginning of their journey.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
@@ -56,7 +54,7 @@ const FeatureHeartLock = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default FeatureHeartLock;

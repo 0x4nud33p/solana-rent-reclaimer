@@ -14,12 +14,9 @@ export function AppLayout({
 }) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-      <div className="flex flex-col min-h-screen">
-        <Header />
         <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           {children}
         </main>
-      </div>
       <Toaster />
     </ThemeProvider>
   )

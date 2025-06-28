@@ -25,7 +25,7 @@ const links: { label: string; path: string }[] = [
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable}`}>
-      <body className="font-spaceGrotesk antialiased">
+      <body className="font-spaceGrotesk antialiased scroll-smooth">
         <AppProviders>
           <AppLayout links={links}>{children}</AppLayout>
         </AppProviders>

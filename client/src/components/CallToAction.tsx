@@ -4,21 +4,20 @@ import { Rocket, Heart, ArrowRight } from "lucide-react";
 
 const CallToAction = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-slate-900 to-purple-950/30">
+    <section className="py-24 px-6 bg-gradient-to-b from-slate-900 to-purple-950/30 font-spaceGrotesk">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-          Join SolMate
-        </h2>
+        <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">Join SolMate</h2>
         <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-8">
           Put your SOL where your heart is
         </p>
-        
+
         <p className="text-lg text-slate-300 mb-12 max-w-2xl mx-auto">
-          Ready to revolutionize your dating life? Join thousands of users who've found meaningful connections through commitment-based matching.
+          Ready to revolutionize your dating life? Join thousands of users who've found meaningful connections through
+          commitment-based matching.
         </p>
 
-        <Button 
-          size="lg" 
+        <Button
+          size="lg"
           className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-12 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 mb-16"
         >
           <Rocket className="mr-3 h-5 w-5" />
@@ -40,7 +39,7 @@ const CallToAction = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default CallToAction;

@@ -21,13 +21,11 @@ const FeatureProofOfLove = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-slate-800/30">
+    <section id="features" className="py-24 px-6 bg-slate-800/30 font-spaceGrotesk">
       <div className="max-w-6xl mx-auto">
         {/* Clean section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Proof of Love
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Proof of Love</h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Revolutionary technology that brings accountability and trust to modern dating
           </p>
@@ -36,8 +34,8 @@ const FeatureProofOfLove = () => {
         {/* Clean feature grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-slate-600 transition-all duration-300 hover:transform hover:scale-105 group"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -68,7 +66,7 @@ const FeatureProofOfLove = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default FeatureProofOfLove;
