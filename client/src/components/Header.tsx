@@ -3,7 +3,7 @@ import { WalletButton } from '@/components/solana/solana-provider'
 
 export const Header = () => {
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-8 py-4 w-[90%] max-w-5xl rounded-4xl border border-white/10 bg-white/10 backdrop-blur-xl shadow-lg">
+    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-8 py-4 w-[90%] max-w-5xl rounded-sm border border-white/10 bg-white/10 backdrop-blur-xl shadow-lg">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo + Name */}
         <div className="flex items-center gap-3">

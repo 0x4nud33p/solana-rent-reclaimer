@@ -1,8 +1,16 @@
-import type { Metadata } from 'next'
 import './globals.css'
 import { AppProviders } from '@/components/app-providers'
 import { AppLayout } from '@/components/app-layout'
 import React from 'react'
+import { Space_Grotesk } from 'next/font/google'
+import type { Metadata } from 'next'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Solmatee',
@@ -10,29 +18,18 @@ export const metadata: Metadata = {
 }
 
 const links: { label: string; path: string }[] = [
-  // More links...
   { label: 'Home', path: '/' },
   { label: 'Account', path: '/account' },
 ]
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
+    <html lang="en" className={`${spaceGrotesk.variable}`}>
+      <body className="font-spaceGrotesk antialiased">
         <AppProviders>
           <AppLayout links={links}>{children}</AppLayout>
         </AppProviders>
       </body>
     </html>
   )
-}
-// Patch BigInt so we can log it using JSON.stringify without any errors
-declare global {
-  interface BigInt {
-    toJSON(): string
-  }
-}
-
-BigInt.prototype.toJSON = function () {
-  return this.toString()
 }
