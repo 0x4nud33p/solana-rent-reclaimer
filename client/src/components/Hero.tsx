@@ -1,9 +1,9 @@
-"use client";
+'use client'
 
-import { Button } from "@/components/ui/button";
-import { Heart, Sparkles, Play, Plus } from "lucide-react";
-import { LoveAnimation } from "./animations/LoveAnimation";
-import { LoveHomeAnimation } from "./animations/LoveHome";
+import { Button } from '@/components/ui/button'
+import { Heart, Sparkles, Play, Plus } from 'lucide-react'
+import { LoveAnimation } from './animations/LoveAnimation'
+import { LoveHomeAnimation } from './animations/LoveHome'
 
 const Hero = () => {
   return (
@@ -46,14 +46,18 @@ const Hero = () => {
         {/* Clean animation placeholder */}
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-10 border border-slate-700">
           <div className="flex items-center justify-center">
+            <div className="h-75 w-75 relative">
               <LoveHomeAnimation />
-              <Plus className="h-30 w-30 text-pink-400 animate-pulse" />
+            </div>
+            <Plus className="h-30 w-30 text-pink-400 animate-pulse" />
+            <div className="h-75 w-75 relative">
               <LoveAnimation />
+            </div>
           </div>
         </div>
       </div>
     </section>
   )
-};
+}
 
-export default Hero;
+export default Hero
