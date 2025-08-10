@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 259 13% 100%;
+    --foreground: 259 5% 10%;
+    --card: 259 13% 100%;
+    --card-foreground: 259 5% 15%;
+    --popover: 259 13% 100%;
+    --popover-foreground: 259 95% 10%;
+    --primary: 259 61.7% 53.9%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 259 13% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 221 13% 95%;
+    --muted-foreground: 259 5% 40%;
+    --accent: 221 13% 90%;
+    --accent-foreground: 259 5% 15%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 259 5% 100%;
+    --border: 259 20% 82%;
+    --input: 259 20% 50%;
+    --ring: 259 61.7% 53.9%;
+    --radius: 1rem;
+  }
+  .dark {
+    --background: 259 20% 7%;
+    --foreground: 259 5% 90%;
+    --card: 259 20% 7%;
+    --card-foreground: 259 5% 90%;
+    --popover: 259 20% 5%;
+    --popover-foreground: 259 5% 90%;
+    --primary: 259 61.7% 53.9%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 259 20% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 221 20% 15%;
+    --muted-foreground: 259 5% 60%;
+    --accent: 221 20% 15%;
+    --accent-foreground: 259 5% 90%;
+    --destructive: 0 50% 30%;
+    --destructive-foreground: 259 5% 90%;
+    --border: 259 20% 18%;
+    --input: 259 20% 18%;
+    --ring: 259 61.7% 53.9%;
+    --radius: 1.1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv02" on;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+}
