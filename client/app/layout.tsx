@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import React from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
-import Script from "next/script";
+import {WalletContextProvider} from "@/providers/solanaProvider";
+
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -63,15 +65,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.variable} font-primary antialiased`}>
+        <WalletContextProvider>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
+          >
           {children}
         </ThemeProvider>
         <Toaster />
+        </WalletContextProvider>
       </body>
     </html>
   );

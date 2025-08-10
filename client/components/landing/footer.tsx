@@ -38,7 +38,7 @@ export default function Footer() {
               reclaim your rent-exempt SOL — secure, fast, and gas-efficient.
             </p>
             <div className="mt-8">
-              <Link href="/app" className="inline-block">
+              <Link href="#" className="inline-block">
                 <Button className="bg-primary text-white hover:bg-primary/90 transition-colors">
                   Start Sweeping
                 </Button>

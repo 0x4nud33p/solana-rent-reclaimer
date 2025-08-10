@@ -3,36 +3,24 @@
 export const artworkData = [
   {
     imageUrl:
-      "https://pin.it/19I8PG68K",
+      "/images/1.png",
   },
   {
     imageUrl:
-      "https://pin.it/19I8PG68K",
+      "/images/2.png",
   },
   {
     imageUrl:
-      "https://pin.it/19I8PG68K",
+      "/images/3.png",
   },
   {
     imageUrl:
-      "https://pin.it/19I8PG68K",   
+      "/images/4.png",
   },
   {
     imageUrl:
-      "https://pin.it/19I8PG68K",
-  },
-  {
-    imageUrl:
-      "https://pin.it/19I8PG68K",
-  },
-  {
-    imageUrl:
-      "https://pin.it/19I8PG68K",
-  },
-  {
-    imageUrl:
-      "https://pin.it/19I8PG68K",
-  },
+      "/images/5.png",
+  }
 ];
 
 // FAQ section

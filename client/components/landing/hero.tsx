@@ -10,6 +10,7 @@ import FloatingIcons from "../floating-icons";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import AnimatedShinyText from "../ui/animated-shiny-text";
+import { Star } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -48,13 +49,13 @@ export default function Hero() {
           </div>
 
           <div className="mt-10 flex sm:flex-row flex-col w-full md:w-auto items-center gap-4">
-            <Link href="/gallery" className="w-full md:w-auto">
+            <Link href="https://github.com/0x4nud33p/solana-rent-reclaimer" target="_blank" className="w-full md:w-auto">
               <Button
                 variant="outline"
                 className="h-8 w-full px-6 py-5 transition-all hover:shadow-[0_0_20px_2px_hsl(var(--primary))]"
               >
-                Connect Now{" "}
-                <IconSparkles className="fill-[hsl(var(--primary))] text-primary dark:fill-[hsl(var(--foreground))] dark:text-foreground" />
+                Github{" "}
+                <Star className="ml-2 size-4 inline-block" />
               </Button>
             </Link>
           </div>
