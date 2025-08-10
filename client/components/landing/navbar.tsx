@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { LoaderIcon } from "lucide-react";
 import { ToggleTheme } from "../theme-toggler";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 export default function Navbar() {
   const [isMounted, setIsMounted] = useState(false);
@@ -23,11 +24,9 @@ export default function Navbar() {
               <LoaderIcon className="animate-spin" />
             </Button>
           )}
-          <Link href="/create" className="hidden md:inline-block">
-            <Button className="bg-primary text-white hover:bg-primary/90 transition-colors">
-              Create Now
-            </Button>
-          </Link>
+          <main className="bg-primary text-white hover:bg-primary/90 transition-colors hidden md:inline-block rounded-lg">
+            <WalletMultiButton />
+          </main>
         </div>
       </nav>
     </header>
