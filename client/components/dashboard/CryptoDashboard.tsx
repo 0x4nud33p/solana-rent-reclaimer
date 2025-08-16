@@ -2,24 +2,54 @@ import { ATAAnalysis } from "./ATAAnalysis";
 import { SOLRecovery } from "./SOLRecovery";
 import { RefreshButton } from "./RefreshButton";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useUnusedATAs } from "@/utils/fetchUnusedTokenAccounts";
 
 export const CryptoDashboard = () => {
+  const { getUnusedATAs } = useUnusedATAs();
   const [dashboardData, setDashboardData] = useState({
     totalATAs: 0,
     unusedATAs: 0,
-    recoverableSOL: 0.00000,
+    recoverableSOL: 0,
     atasToClose: 0,
-    estimatedRecovery: 0.00000,
+    estimatedRecovery: 0,
     transactionFees: 0.001,
     hasUnusedATAs: false
   });
 
-  const handleRefresh = () => {
-    // In a real app, this would fetch fresh data from the blockchain
+  const handleRefresh = async () => {
     console.log("Refreshing ATA analysis...");
+    const result = await getUnusedATAs();
+    console.log("Fetched unused ATAs:", result);
+    if (Array.isArray(result)) {
+      // Handle the case where result is an array (fallback/default)
+      setDashboardData(prev => ({
+        ...prev,
+        totalATAs: prev.totalATAs,
+        unusedATAs: result.length,
+        atasToClose: result.length,
+        estimatedRecovery: 0,
+        recoverableSOL: 0,
+        hasUnusedATAs: result.length > 0
+      }));
+    } else {
+      // Handle the case where result is the expected object
+      const { unused, estimatedRecovery } = result;
+      setDashboardData(prev => ({
+        ...prev,
+        totalATAs: prev.totalATAs,
+        unusedATAs: unused.length,
+        atasToClose: unused.length,
+        estimatedRecovery,
+        recoverableSOL: estimatedRecovery,
+        hasUnusedATAs: unused.length > 0
+      }));
+    }
   };
 
-  return (
+  useEffect(() => { handleRefresh(); }, []);
+
+ return (
     <div className="min-h-screen bg-background">
       {/* Background gradient */}
       <div className="fixed inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5 pointer-events-none" />
