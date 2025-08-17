@@ -17,11 +17,11 @@ export default function Navbar() {
     setIsMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (connected) {
-      router.push("/dashboard");
-    }
-  }, [connected, router]);
+  // useEffect(() => {
+  //   if (connected) {
+  //     router.push("/dashboard");
+  //   }
+  // }, [connected, router]);
 
   return (
     <header className="fixed max-w-6xl mx-auto px-4 top-0 left-0 right-0 z-50">
