@@ -7,7 +7,6 @@ import {
     PhantomWalletAdapter,
     SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
-import { clusterApiUrl } from "@solana/web3.js";
 
 import "@solana/wallet-adapter-react-ui/styles.css";
 
@@ -16,7 +15,7 @@ interface Props {
 }
 
 export const WalletContextProvider: FC<Props> = ({ children }) => {
-    const network = "https://mainnet.helius-rpc.com/?api-key=9de46fce-a801-47d2-a081-05713f1c2c39";
+    const network = `https://mainnet.helius-rpc.com/?api-key=${process.env.NEXT_PUBLIC_HELIUS_RPC_ENDPOINT}`;
 
     const wallets = useMemo(
         () => [
