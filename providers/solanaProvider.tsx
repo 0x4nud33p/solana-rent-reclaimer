@@ -16,7 +16,7 @@ interface Props {
 }
 
 export const WalletContextProvider: FC<Props> = ({ children }) => {
-    const network = clusterApiUrl("mainnet-beta"); // "mainnet-beta" or "testnet"
+    const network = "https://mainnet.helius-rpc.com/?api-key=9de46fce-a801-47d2-a081-05713f1c2c39";
 
     const wallets = useMemo(
         () => [

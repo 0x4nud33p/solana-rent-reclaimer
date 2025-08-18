@@ -55,7 +55,7 @@ export default function Hero() {
                 className="h-8 w-full px-6 py-5 transition-all hover:shadow-[0_0_20px_2px_hsl(var(--primary))]"
               >
                 Github{" "}
-                <Star className="ml-2 size-4 inline-block" />
+                <Star className="ml-2 size-4 inline-block fill-current text-yellow-500" />
               </Button>
             </Link>
           </div>

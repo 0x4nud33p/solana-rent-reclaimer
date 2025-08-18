@@ -5,23 +5,14 @@ import { Button } from "../ui/button";
 import { LoaderIcon } from "lucide-react";
 import { ToggleTheme } from "../theme-toggler";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useWallet } from "@solana/wallet-adapter-react";
 import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [isMounted, setIsMounted] = useState(false);
-  const { connected } = useWallet();
-  const router = useRouter();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  // useEffect(() => {
-  //   if (connected) {
-  //     router.push("/dashboard");
-  //   }
-  // }, [connected, router]);
 
   return (
     <header className="fixed max-w-6xl mx-auto px-4 top-0 left-0 right-0 z-50">
